@@ -1,37 +1,49 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="resources/css/styles.css" />
-    <script defer type="text/javascript" src="resources/js/scripts.js"></script>
-    <title>Tic Tac Toe Game</title>
-  </head>
+   <head>
+      <link rel="stylesheet" href="resources/css/styles.css" />
+      <script
+         defer
+         type="text/javascript"
+         src="resources/js/scripts.js"
+      ></script>
+      <title>Tic-Tac-Toe</title>
+   </head>
 
-  <body>
-    <div class="header">
-      <h1>Tic Tac Toe</h1>
-    </div>
-
-    <div class="main-container">
-      <div class="row-1">
-        <div class="inner-square" id="one"></div>
-        <div class="inner-square" id="two"></div>
-        <div class="inner-square" id="three"></div>
-      </div>
-      <div class="row-2">
-        <div class="inner-square" id="four"></div>
-        <div class="inner-square" id="five"></div>
-        <div class="inner-square" id="six"></div>
-      </div>
-      <div class="row-3">
-        <div class="inner-square" id="seven"></div>
-        <div class="inner-square" id="eight"></div>
-        <div class="inner-square" id="nine"></div>
+   <body>
+      <div class="header">
+         <h1>Tic-Tac-Toe</h1>
       </div>
 
-      <div class="modal">
-        <div class="modal-body"></div>
-        <div class="modal-overlay"></div>
+      <div>
+         <h3 class="player-id" id="player-id">
+            <span id="current-player"> Player 1</span>'s Turn
+         </h3>
       </div>
-    </div>
-  </body>
+
+      <div class="main-container">
+         <div class="row-1">
+            <div class="inner-square" id="one"></div>
+            <div class="inner-square" id="two"></div>
+            <div class="inner-square" id="three"></div>
+         </div>
+         <div class="row-2">
+            <div class="inner-square" id="four"></div>
+            <div class="inner-square" id="five"></div>
+            <div class="inner-square" id="six"></div>
+         </div>
+         <div class="row-3">
+            <div class="inner-square" id="seven"></div>
+            <div class="inner-square" id="eight"></div>
+            <div class="inner-square" id="nine"></div>
+         </div>
+
+         <div class="modal">
+            <div class="modal-content">
+               <p id="modal-text">Test Text</p>
+            </div>
+            <div class="modal-overlay"></div>
+         </div>
+      </div>
+   </body>
 </html>
