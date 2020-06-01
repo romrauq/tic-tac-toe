@@ -37,55 +37,56 @@ function playMove(e) {
       }
    }
    playCount++;
+   winCondition();
    console.log(playCount);
 }
 
 function winCondition() {
    if (one.innerText && two.innerText && three.innerText === "X") {
-      modalOutput();
+      alert("Player 1 Wins!!!");
    } else if (one.innerText && two.innerText && three.innerText === "O") {
-      modalOutput();
+      alert("Player 2 Wins!!!");
    }
 
    if (four.innerText && five.innerText && six.innerText === "X") {
-      modalOutput();
+      alert("Player 1 Wins!!!");
    } else if (four.innerText && five.innerText && six.innerText === "O") {
-      modalOutput();
+      alert("Player 2 Wins!!!");
    }
 
    if (seven.innerText && eight.innerText && nine.innerText === "X") {
-      modalOutput();
+      alert("Player 1 Wins!!!");
    } else if (seven.innerText && eight.innerText && nine.innerText === "O") {
-      modalOutput();
+      alert("Player 2 Wins!!!");
    }
 
    if (one.innerText && four.innerText && seven.innerText === "X") {
-      modalOutput();
+      alert("Player 1 Wins!!!");
    } else if (one.innerText && four.innerText && seven.innerText === "O") {
-      modalOutput();
+      alert("Player 2 Wins!!!");
    }
 
    if (two.innerText && five.innerText && eight.innerText === "X") {
-      modalOutput();
+      alert("Player 1 Wins!!!");
    } else if (one.innerText && four.innerText && seven.innerText === "O") {
-      modalOutput();
+      alert("Player 2 Wins!!!");
    }
 
    if (three.innerText && six.innerText && nine.innerText === "X") {
-      modalOutput();
+      alert("Player 1 Wins!!!");
    } else if (three.innerText && six.innerText && nine.innerText === "O") {
-      modalOutput();
+      alert("Player 2 Wins!!!");
    }
    if (one.innerText && five.innerText && nine.innerText === "X") {
-      modalOutput();
+      alert("Player 1 Wins!!!");
    } else if (one.innerText && five.innerText && nine.innerText === "O") {
-      modalOutput();
+      alert("Player 2 Wins!!!");
    }
 
    if (three.innerText && five.innerText && seven.innerText === "X") {
-      modalOutput();
+      alert("Player 1 Wins!!!");
    } else if (one.innerText && five.innerText && seven.innerText === "O") {
-      modalOutput();
+      alert("Player 2 Wins!!!");
    }
 
    function modalOutput() {
