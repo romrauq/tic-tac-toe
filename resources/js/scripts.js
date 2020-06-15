@@ -167,15 +167,15 @@ function winCondition() {
    }
 
    // function showWinner() {
-   //    if (winCondition == "player1") {
+   //    if () {
    //       //Player 1 wins!
    //       modal.style.display = "block";
    //       modalText.innerText = "Player One Wins!!!";
-   //    } else if (winner == "player2") {
+   //    } else if () {
    //       //Player 2 wins!
    //       modal.style.display = "block";
    //       modalText.innerText = "Player Two Wins!!!";
-   //    } else if (winCondition == "none") {
+   //    } else if () {
    //       //No winner
    //       modal.style.display = "block";
    //       modalText.innerText = "Draw, No winner :(";
