@@ -16,10 +16,9 @@ modal = document.querySelector("#modal");
 modalText = document.querySelector("#modal-text");
 currentPlayer = document.querySelector("#current-player");
 let playCount = 0;
+let winner = "";
 
-// let winner = "";
-
-// A for loop that listens for clicks on square divs and fires "PlayMove()" function
+// A for loop listening for clicks on square divs and fires "PlayMove()" function
 for (i = 0; i < allAreas.length; i++) {
    // areaArray[i].addEventListener("click", playMove);
    // allAreas[i].addEventListener("click", winCondition);
@@ -41,33 +40,36 @@ function playMove(e) {
    }
    // }
    console.log(playCount);
+   console.log("winner is... " + winner);
+
    winCondition();
+   showWinner();
 }
 
 //Function to check conditions if there is a winner or game ended in a draw:
 function winCondition() {
    if (one.innerHTML == "X" && two.innerHTML == "X" && three.innerHTML == "X") {
       // alert("Player 1 Wins!!! [win con:'X.123']");
-      showWinner();
+      winner = "player1";
    } else if (
       one.innerHTML == "O" &&
       two.innerHTML == "O" &&
       three.innerHTML == "O"
    ) {
       // alert("Player 2 Wins!!! [win con:'O.123']");
-      showWinner();
+      winner = "player2";
    }
 
    if (four.innerHTML == "X" && five.innerHTML == "X" && six.innerHTML == "X") {
       // alert("Player 1 Wins!!! [win con:'X.456']");
-      showWinner();
+      winner = "player1";
    } else if (
       four.innerHTML == "O" &&
       five.innerHTML == "O" &&
       six.innerHTML == "O"
    ) {
       // alert("Player 2 Wins!!! [win con:'0.456']");
-      showWinner();
+      winner = "player2";
    }
 
    if (
@@ -76,14 +78,14 @@ function winCondition() {
       nine.innerHTML == "X"
    ) {
       // alert("Player 1 Wins!!! [win con:'X.789']");
-      showWinner();
+      winner = "player1";
    } else if (
       seven.innerHTML == "O" &&
       eight.innerHTML == "O" &&
       nine.innerHTML == "O"
    ) {
       // alert("Player 2 Wins!!! [win con:'O.789']");
-      showWinner();
+      winner = "player2";
    }
 
    if (
@@ -92,14 +94,14 @@ function winCondition() {
       seven.innerHTML == "X"
    ) {
       // alert("Player 1 Wins!!! [win con:'X.147']");
-      showWinner();
+      winner = "player1";
    } else if (
       one.innerHTML == "O" &&
       four.innerHTML == "O" &&
       seven.innerHTML == "O"
    ) {
       // alert("Player 2 Wins!!! [win con:'O.147']");
-      showWinner();
+      winner = "player2";
    }
 
    if (
@@ -108,14 +110,14 @@ function winCondition() {
       eight.innerHTML == "X"
    ) {
       // alert("Player 1 Wins!!! [win con:'X.258']");
-      showWinner();
+      winner = "player1";
    } else if (
       two.innerHTML == "O" &&
       five.innerHTML == "O" &&
       eight.innerHTML == "O"
    ) {
       // alert("Player 2 Wins!!! [win con:'O.258']");
-      showWinner();
+      winner = "player2";
    }
 
    if (
@@ -124,25 +126,25 @@ function winCondition() {
       nine.innerHTML == "X"
    ) {
       // alert("Player 1 Wins!!! [win con:'X.369']");
-      showWinner();
+      winner = "player1";
    } else if (
       three.innerHTML == "O" &&
       six.innerHTML == "O" &&
       nine.innerHTML == "O"
    ) {
       // alert("Player 2 Wins!!! [win con:'O.369']");
-      showWinner();
+      winner = "player2";
    }
    if (one.innerHTML == "X" && five.innerHTML == "X" && nine.innerHTML == "X") {
       // alert("Player 1 Wins!!! [win con:'X.156']");
-      showWinner();
+      winner = "player1";
    } else if (
       one.innerHTML == "O" &&
       five.innerHTML == "O" &&
       nine.innerHTML == "O"
    ) {
       // alert("Player 2 Wins!!! [win con:'O.159']");
-      showWinner();
+      winner = "player2";
    }
 
    if (
@@ -151,34 +153,34 @@ function winCondition() {
       seven.innerHTML == "X"
    ) {
       // alert("Player 1 Wins!!! [win con:'X.357']");
-      showWinner();
+      winner = "player1";
    } else if (
       three.innerHTML == "O" &&
       five.innerHTML == "O" &&
       seven.innerHTML == "O"
    ) {
       // alert("Player 2 Wins!!! [win con:'O.357']");
-      showWinner();
+      winner = "player2";
    }
 
    if (playCount == 9) {
       // alert("Draw! Try Again");
-      showWinner();
+      winner = "draw";
    }
+}
 
-   // function showWinner() {
-   //    if () {
-   //       //Player 1 wins!
-   //       modal.style.display = "block";
-   //       modalText.innerText = "Player One Wins!!!";
-   //    } else if () {
-   //       //Player 2 wins!
-   //       modal.style.display = "block";
-   //       modalText.innerText = "Player Two Wins!!!";
-   //    } else if () {
-   //       //No winner
-   //       modal.style.display = "block";
-   //       modalText.innerText = "Draw, No winner :(";
-   //    }
-   // }
+function showWinner() {
+   if (winner == "player1") {
+      //Player 1 wins!
+      modalText.innerText = "Player One Wins!!!";
+      modal.style.display = "block";
+   } else if (winner == "player2") {
+      //Player 2 wins!
+      modalText.innerText = "Player Two Wins!!!";
+      modal.style.display = "block";
+   } else if (winner == "draw") {
+      //No winner
+      modalText.innerText = "Draw, No winner :(";
+      modal.style.display = "block";
+   }
 }
