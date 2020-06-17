@@ -11,10 +11,11 @@ Area9 = document.querySelector("#nine");
 
 let allAreas = document.querySelectorAll(".inner-square");
 // areaArray = [Area1, Area2, Area3, Area4, Area5, Area6, Area7, Area8, Area9];
-
 modal = document.querySelector("#modal");
 modalText = document.querySelector("#modal-text");
 currentPlayer = document.querySelector("#current-player");
+restart_btn = document.querySelector("#restart-btn");
+
 let playCount = 0;
 let winner = "";
 
@@ -25,6 +26,7 @@ for (i = 0; i < allAreas.length; i++) {
    // allAreas[i].addEventListener("click", modalOutput);
    allAreas[i].addEventListener("click", playMove);
 }
+restart_btn.addEventListener("click", restartGame);
 
 //A funtion to alternate the input entering "X" & "O" within the play squares:
 function playMove(e) {
@@ -39,8 +41,8 @@ function playMove(e) {
       currentPlayer.innerText = "Player One";
    }
    // }
-   console.log(playCount);
-   console.log("winner is... " + winner);
+   // console.log(playCount);
+   // console.log("winner is = " + winner);
 
    winCondition();
    showWinner();
@@ -183,4 +185,15 @@ function showWinner() {
       modalText.innerText = "Draw, No winner :(";
       modal.style.display = "block";
    }
+}
+
+function restartGame() {
+   // console.log("");
+   modal.style.display = "none";
+   for (i = 0; i < allAreas.length; i++) {
+      allAreas[i].innerText = "";
+   }
+   currentPlayer.innerText = "Player One";
+   winner = "";
+   playCount = 0;
 }
